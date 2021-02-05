@@ -1,5 +1,6 @@
 var data = require("../data.json");
 
 exports.addFriend = function(request, response) {    
-	// Your code goes here
+	var data = ('../data.json');
+	res.render('index', data);
  }

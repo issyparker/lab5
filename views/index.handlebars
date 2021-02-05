@@ -7,8 +7,30 @@
 	
 </head>
 
+<script src = "https://code.jquery.com/jquery.js"></script>
+<script src = "js/bootstrap.js"></script>
+<script src = "js/hci-friends.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<link href="css/hci-friends.css" rel="stylesheet">
+
+<meta name = "viewport" content = "width= device-width, initial scale=1.0">
+
 <body>
+	<div class ="container">
+
 	<h1>My HCI Friends</h1>
+
+	{{#each friends}}
+		<div class = "friends">
+			<a href = "" class= "friends" >
+				<h3> {{name}}</h3>
+				<img src="{{imageURL}}" class="img-responsive" class="img-rounded">
+		</a>
+			<p>{{description}}</p>
+		</div>
+	{{/each}}
 
 	<form id="addFriendForm" role="form" method="get" action="/add">
 		<h3>Add a friend</h3>
